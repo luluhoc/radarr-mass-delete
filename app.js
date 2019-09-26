@@ -25,16 +25,15 @@ function deleteMovies() {
         const movie = {
           rId: e.id,
           imdbId: e.imdbId,
+          title: e.title,
         }
         rp(`http://www.omdbapi.com/?apikey=${keyOmdb}&i=${movie.imdbId}`)
           .then((body) => {
             const data = JSON.parse(body);
             movie.imdbVotes = data.imdbVotes;
             movie.imdbRating = Number(data.imdbRating);
-            console.log(movie.imdbRating <= desiredRating)
-            console.log(movie.imdbRating)
             if (movie.imdbRating <= desiredRating) {
-              console.log('3')
+              console.log(`Deleting ${movie}`)
               var options = {
                 method: 'DELETE',
                 uri: `${radarrUrl}${movie.rId}?addExclusion=${addExclusion}&$deleteFiles={deleteFiles}`,
@@ -51,6 +50,5 @@ function deleteMovies() {
     })
     .catch(err => console.log(err))
 };
-
 
 deleteMovies()
