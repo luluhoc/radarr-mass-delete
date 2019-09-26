@@ -34,7 +34,7 @@ function deleteMovies() {
             movie.imdbRating = Number(data.imdbRating);
             if (movie.imdbRating <= desiredRating) {
               console.log(`Deleted ${movie.title}`);
-              var options = {
+              const options = {
                 method: 'DELETE',
                 uri: `${radarrUrl}${movie.rId}?addExclusion=${addExclusion}&deleteFiles=${deleteFiles}`,
                 headers: {
