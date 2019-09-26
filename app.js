@@ -36,7 +36,7 @@ function deleteMovies() {
               console.log(`Deleted ${movie.title}`);
               var options = {
                 method: 'DELETE',
-                uri: `${radarrUrl}${movie.rId}?addExclusion=${addExclusion}&$deleteFiles=${deleteFiles}`,
+                uri: `${radarrUrl}${movie.rId}?addExclusion=${addExclusion}&deleteFiles=${deleteFiles}`,
                 headers: {
                   'User-Agent': 'request',
                   'X-Api-Key': radarrAPI,
