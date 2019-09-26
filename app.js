@@ -2,7 +2,7 @@ const request = require('request');
 const rp = require('request-promise');
 
 // settings
-const radarrAPI = 'YOUR_API_KEY'
+const radarrAPI = 'YOUR_API_KEY' // API Key From Radarr
 const addExclusion = true; // true if you want to add exclusions // default true
 const deleteFiles = true // true if you want to delete movie from disk // default true
 const keyOmdb = 'KEY_TO_OMDB'; // https://www.omdbapi.com/
