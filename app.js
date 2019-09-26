@@ -2,12 +2,12 @@ const request = require('request');
 const rp = require('request-promise');
 
 // settings
-const radarrAPI = 'YOUR_API FROM RADARR'
+const radarrAPI = 'YOUR_API_FROM_RADARR'
 const addExclusion = true; // true if you want to add exclusions // default true
 const deleteFiles = true // true if you want to delete movie from disk // default true
 const keyOmdb = 'OMDB_KEY';
 const desiredRating = 6 // all the movies below and equal to this rating are gonna be deleted
-const radarrUrl = 'https://radarr4k.YOURDOMAIN.com/api/movie/'
+const radarrUrl = 'https://radarr.YOURDOMAIN.com/api/movie/'
 
 const radarrGet = {
   uri: `${radarrUrl}`,
