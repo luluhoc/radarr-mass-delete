@@ -1,12 +1,13 @@
 Radarr Mass Delete Low Rating Movies
 ===
-I've created this script because I had many lists in my Radarr and I had a rating from `8` for auto-add and monitor, but Radarr rating is very misleading so I've ended up with many shitty movies in my collection.
-
-I recommend running this script every month if you wish to have movies based on real IMDB rating in your collection.
-
 The Script will clean up your library from shitty movies based on the IMDB Rating.
 
 The Script fetches all the movies, you have in the database, then fetches rating from IMDB for every movie and compares the movie rating with the rating set up by User.
+
+I've created this script because I had many lists in my Radarr with rating from `8` for auto-add and monitor, but Radarr rating is very misleading so I've ended up with many shitty movies in my collection.
+
+I recommend running this script every month if you wish to have movies based on real IMDB rating in your collection.
+
 
 How to install and use?
 ---
