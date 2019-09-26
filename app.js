@@ -27,7 +27,7 @@ function deleteMovies() {
           imdbId: e.imdbId,
           title: e.title,
         };
-        rp(`http://www.omdbapi.com/?apikey=${keyOmdb}&i=${movie.imdbId}`)
+        rp(`https://www.omdbapi.com/?apikey=${keyOmdb}&i=${movie.imdbId}`)
           .then((body) => {
             const data = JSON.parse(body);
             movie.imdbVotes = data.imdbVotes;
