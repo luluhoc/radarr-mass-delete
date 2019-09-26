@@ -4,7 +4,7 @@
   "description": "Mass Delete movies from radarr below your personal rating. The Script takes rating from IMDB then compares against desired.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
