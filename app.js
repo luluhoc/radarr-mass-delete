@@ -2,10 +2,10 @@ const request = require('request');
 const rp = require('request-promise');
 
 // settings
-const radarrAPI = 'YOUR_API_FROM_RADARR'
+const radarrAPI = 'YOUR_API_KEY'
 const addExclusion = true; // true if you want to add exclusions // default true
 const deleteFiles = true // true if you want to delete movie from disk // default true
-const keyOmdb = 'OMDB_KEY';
+const keyOmdb = 'KEY_TO_OMDB'; // https://www.omdbapi.com/
 const desiredRating = 6 // all the movies below and equal to this rating are gonna be deleted
 const radarrUrl = 'https://radarr.YOURDOMAIN.com/api/movie/'
 
@@ -33,10 +33,10 @@ function deleteMovies() {
             movie.imdbVotes = data.imdbVotes;
             movie.imdbRating = Number(data.imdbRating);
             if (movie.imdbRating <= desiredRating) {
-              console.log(`Deleting ${movie}`)
+              console.log(`Deleted ${movie.title}`)
               var options = {
                 method: 'DELETE',
-                uri: `${radarrUrl}${movie.rId}?addExclusion=${addExclusion}&$deleteFiles={deleteFiles}`,
+                uri: `${radarrUrl}${movie.rId}?addExclusion=${addExclusion}&$deleteFiles=${deleteFiles}`,
                 headers: {
                   'User-Agent': 'request',
                   'X-Api-Key': radarrAPI,
