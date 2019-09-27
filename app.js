@@ -42,7 +42,7 @@ function deleteMovies() {
                   'X-Api-Key': radarrAPI,
                 }
               };
-              rp(options).then((item) => console.log(item)).catch(err => console.log(err))
+              rp(options).then((item) => console.log('done')).catch(err => console.log(err))
             }
           })
           .catch(err => console.log(err))
