@@ -1,3 +1,7 @@
+This repository is depreciated please use https://github.com/luluhoc/home-cinema-toolkit
+=====
+
+
 Radarr Mass Delete Low Rating Movies
 ===
 The Script will clean up your library from shitty movies based on the IMDB Rating.
